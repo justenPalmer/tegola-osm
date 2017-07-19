@@ -9,15 +9,25 @@
 		<style>
 			body { margin:0; padding:0; }
 			#map { position:absolute; top:0; bottom:0; width:100%; }
+      #switch-styles { position: absolute; bottom: 0px; left; 10px; }
+      .switch-style { width: 50px; height: 50px; background: #ccc; opacity: 0.8; float: left; margin: 0 1em 0; text-align: center; font-size: 14px;padding: 1em;  cursor: pointer; border: 1px solid #cecece; border-bottom: none;}
+      .switch-style.osm { background: #f7f6f1; }
+      .switch-style.camo{ background: #576759; }
 		</style>
 	</head>
 	<body>
 	<div id='map'></div>
+  <div id="switch-styles">
+    <div class="switch-style camo" onClick="switchStyle('camo');">Camo</div>
+    <div class="switch-style osm" onClick="switchStyle('mapbox');">OSM</div>
+    <div class="switch-style osm" onClick="switchStyle('mobility');">Mobility</div>
+    <div class="switch-style osm" onClick="switchStyle('night-vision3d');">Night Vision</div>
+  </div>
 	<script>
 		//	init map
 		var map = new mapboxgl.Map({
 			container: 'map', // container id
-			style: 'js/mapbox.json',
+			style: '/styles/mapbox.json',
 			center: [-117.15117725013909, 32.72269876352742], 
 			zoom: 15,
 			hash: true 
@@ -25,6 +35,9 @@
 
 		// Add zoom and rotation controls to the map.
 		map.addControl(new mapboxgl.NavigationControl());
+    var switchStyle = function(style) {
+      map.setStyle('/styles/'+style+'.json');
+    }
 	</script>
 	</body>
 </html>
