@@ -22,6 +22,13 @@
     <div class="switch-style night-vision" onClick="switchStyle('night-vision');">Night Vision</div>
     <div class="switch-style osgeo" onClick="switchStyle('osgeo');">OSGeo</div>
   </div>
+  <div id="switch-formats">
+    <select id="format-switch" name="format-switch">
+      <option value="">Default</option>
+      <option value="inspector">Open Inspector</option>
+      <option value="fresco">Open Style Editor</option>
+		</select>
+  </div>
   <div id="switch-libs">
     <div class="switch-style ol3" onClick="switchLib(mapbox);"><img src="images/mapbox-logo.png" width="50"/></div>
     <div class="switch-style mapbox" onClick="switchLib(openlayers);"><img src="images/ol3-logo.png" width="50"/></div>

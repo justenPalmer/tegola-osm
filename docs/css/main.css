@@ -18,6 +18,11 @@ body {
   top: 20px;
   right: 80px;
 }
+#switch-formats{
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
 #switch-libs{
   position: absolute;
   bottom: 0px;
