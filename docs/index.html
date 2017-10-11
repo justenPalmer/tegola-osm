@@ -23,11 +23,9 @@
     <div class="switch-style osgeo" onClick="switchStyle('osgeo');">OSGeo</div>
   </div>
   <div id="switch-formats">
-    <select id="format-switch" name="format-switch">
-      <option value="">Default</option>
-      <option value="inspector">Open Inspector</option>
-      <option value="fresco">Open Style Editor</option>
-		</select>
+    <div class="switch-format default" onClick="switchFormat('');">Default</div>
+    <div class="switch-format inspector" onClick="switchFormat('inspector');">Open Inspector</div>
+    <div class="switch-format style" onClick="switchFormat('fresco');">Open Style Editor</div>
   </div>
   <div id="switch-libs">
     <div class="switch-style ol3" onClick="switchLib(mapbox);"><img src="images/mapbox-logo.png" width="50"/></div>

@@ -23,6 +23,19 @@ body {
   top: 40px;
   left: 40px;
 }
+#switch-formats .switch-format{
+  height: 20px;
+	padding: 0.5em;
+  opacity: 0.9;
+  border: 1px solid #cecece;
+	margin: 0.5em 0;
+  cursor: pointer;
+  background: #f7f6f1;
+  -webkit-box-shadow: 6px -6px 15px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px -6px 15px -10px rgba(0,0,0,0.75);
+  box-shadow: 6px -6px 15px -10px rgba(0,0,0,0.75);
+  font-weight: 400;
+}
 #switch-libs{
   position: absolute;
   bottom: 0px;

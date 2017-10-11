@@ -120,7 +120,7 @@ var switchServer = function(type) {
   currentServer = config[type];
   currentLib.switchStyle(currentStyle);
 }
-var updateFormat = function(type) {
+var switchFormat = function(type) {
   window.location.pathname ="/"+type;
 }
 document.getElementById('server-switch').addEventListener('change', function(event) {
@@ -129,9 +129,6 @@ document.getElementById('server-switch').addEventListener('change', function(eve
 document.getElementById('city-switch').addEventListener('change', function(event) {
   var coordinates = this.value.split(",")
   currentLib.updatePosition(parseFloat(coordinates[0]), parseFloat(coordinates[1]), 12);
-})
-document.getElementById('format-switch').addEventListener('change', function(event) {
-  updateFormat(this.value);
 })
 currentLib = mapbox;
 currentStyle = 'mapbox';
